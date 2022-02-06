@@ -1,0 +1,132 @@
+.container {
+    color: white;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.timeline {
+    width: 80%;
+    height: auto;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.timeline ul li {
+    padding: 20px;
+    /* background-color: rgba(5, 5, 5, 0.6);
+    border-radius: 10px; */
+    color: rgb(37, 34, 34);
+    margin-bottom: 20px;
+}
+
+.timeline ul li:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-content h1 {
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+
+.timeline-content p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+
+.timeline-content .date {
+    margin-bottom: 10px;
+}
+
+@media only screen and (min-width: 786px) {
+    .timeline-content {
+        margin-top: 0;
+    }
+
+    .timeline-content p {
+        margin-bottom: 0;
+    }
+
+    .activities p {
+        margin-bottom: 0;
+    }
+
+    .timeline-content .program-name {
+        font-weight: 500;
+    }
+
+    .timeline::before {
+        content: '';
+        height: 100%;
+        width: 4px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(172, 171, 171, 0.575);
+    }
+
+    .timeline ul li {
+        width: 50%;
+        margin-bottom: 50px;
+        position: relative;
+    }
+
+    .timeline ul li:nth-child(odd) {
+        float: left;
+        clear: right;
+        transform: translateX(-30px);
+        border-radius: 20px 0px 20px 20px;
+        text-align: right;
+    }
+
+    .timeline ul li:nth-child(even) {
+        float: right;
+        clear: left;
+        transform: translateX(30px);
+        border-radius: 0px 20px 20px 20px;
+    }
+
+    .timeline ul li::after {
+        content: '';
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        background-color: gray;
+        border-width: 3px;
+        border-style: solid;
+        border-color: #fbc02d;
+        border-radius: 50%;
+    }
+
+    .timeline ul li:nth-child(odd)::after {
+        top: 30px;
+        transform: translate(50%, -50%);
+        right: -30px;
+    }
+
+    .timeline ul li:nth-child(even)::after {
+        top: 10px;
+        transform: translate(-50%, 50%);
+        left: -30px;
+    }
+
+    .timeline ul li:hover::after {
+        background-color: hsl(43, 96%, 58%);
+    }
+
+    .timeline-content .date {
+        /* position: absolute; */
+        line-height: 5px;
+        font-size: 16px;
+        font-weight: 500;
+        top: -30px;
+        color: hsl(0, 1%, 23%);
+    }
+}
